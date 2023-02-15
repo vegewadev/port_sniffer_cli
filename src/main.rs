@@ -20,14 +20,21 @@ fn main() {
         println!("Version: {}", version);
     } else if command == "-s" || command == "--scan" {
         if args.len() == 2 {
-            eprintln!("Error: You need to specify an IP address to scan. Run -h or --help for more information.");
+            println!("Usage: {} [command] [arguments]", args[0]);
+            println!(" -h, --help\tDisplay this help message");
+            println!(" -v, --version\tDisplay the version of this program");
+            println!(" -s, --scan\tScan an IP address. Usage: -s [IPv4 Address]");
             std::process::exit(1);
         }
 
         let ip: String = args[2].clone();
         core::scan_ip::scan(&ip);
     } else {
-        eprintln!("Error: Unknown command. Run -h or --help for more information.");
+        println!("Usage: {} [command] [arguments]", args[0]);
+        println!(" -h, --help\tDisplay this help message");
+        println!(" -v, --version\tDisplay the version of this program");
+        println!(" -s, --scan\tScan an IP address. Usage: -s [IPv4 Address]");
+        std::process::exit(1);
     }
 
     std::process::exit(0);

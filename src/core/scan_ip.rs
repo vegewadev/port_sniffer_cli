@@ -20,10 +20,10 @@ pub fn scan(ip: &str) {
             );
             match connection_with_timeout {
                 Ok(_) => {
-                    return Some(port);
+                    Some(port)
                 }
                 Err(_) => {
-                    return None;
+                    None
                 }
             }
         });
@@ -63,28 +63,12 @@ pub fn scan(ip: &str) {
     let elapsed_time = start_time.elapsed();
     println!("Scan completed in {}m {}s", elapsed_time.as_secs() / 60, elapsed_time.as_secs() % 60);
 
-    if open_ports.len() == 0 {
+    if open_ports.is_empty() {
         println!("No open ports found.");
     } else {
-        println!("PORT\tSERVICE\tPROTOCOL");
+        println!("PORT\tPROTOCOL\tSTATE");
         for port in open_ports {
-            let service = match port {
-                21 => "FTP",
-                22 => "SSH",
-                23 => "Telnet",
-                25 => "SMTP",
-                53 => "DNS",
-                80 => "HTTP",
-                110 => "POP3",
-                143 => "IMAP",
-                443 => "HTTPS",
-                993 => "IMAPS",
-                995 => "POP3S",
-                3306 => "MySQL",
-                8080 => "HTTP",
-                _ => "Unknown",
-            };
-            println!("{}\t{}\t{}", port.to_string(), service, "TCP");
+            println!("{}\tTCP\tOPEN", port);
         }
     }
 
