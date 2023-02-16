@@ -5,17 +5,17 @@ Please only use this for ethical purposes only!
 # Usage
 ### Build the project
 ```
-cargo build
+cargo build --release
 ```
 
 ### Run the project (linux)
 ```
-./target/debug/port_sniffer_cli -s IPV4ADDRESS
+./release/debug/portsniffer -s IPV4ADDRESS
 ```
 ### Run the project (windows)
-Open the folder target/debug and then execute port_sniffer_cli.exe
+Open the folder target/debug and then execute portsniffer.exe
 
 ### To gather help run
 ```
-./target/debug/port_sniffer_cli -h
+./target/debug/portsniffer -h
 ```
