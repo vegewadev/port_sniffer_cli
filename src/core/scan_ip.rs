@@ -49,7 +49,7 @@ pub fn scan(ip: &str) {
 
             print!("\x1B[2J\x1B[1;1H");
 
-            println!("Port sniffer CLI by https://github.com/vin-ll | repository: https://github.com/vin-ll/port-sniffer-cli");
+            println!("Port sniffer CLI by https://github.com/vin-ll | repository: https://github.com/vin-ll/port_sniffer_cli");
             println!("{}% complete. Estimated time remaining: {} secs ({} mins)", percentage, remaining_time_secs, remaining_time_mins);
         }
     }

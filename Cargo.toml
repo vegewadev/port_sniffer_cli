@@ -1,7 +1,15 @@
 [package]
 name = "portsniffer"
 version = "1.0.1"
-edition = "2021"
+author = "Vin H<vinh260607@gmail.com>"
+license = "MIT"
+description = "A simple port sniffer written in Rust"
+repository = "https://github.com/vin-ll/port_sniffer_cli"
+homepage = "https://github.com/vin-ll/port_sniffer_cli"
+documentation = "https://github.com/vin-ll/port_sniffer_cli"
+readme = "README.md"
+keywords = ["port", "sniffer", "rust"]
+categories = ["networking"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
