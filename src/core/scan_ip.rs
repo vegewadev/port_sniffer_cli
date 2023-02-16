@@ -66,9 +66,9 @@ pub fn scan(ip: &str) {
     if open_ports.is_empty() {
         println!("No open ports found.");
     } else {
-        println!("PORT\tPROTOCOL\tSTATE");
+        println!("STATE\tPORT\tPROTOCOL");
         for port in open_ports {
-            println!("{}\tTCP\tOPEN", port);
+            println!("OPEN\t{}\tTCP", port);
         }
     }
 
