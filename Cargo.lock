@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "port_sniffer_cli"
+name = "portsniffer"
 version = "1.0.1"
