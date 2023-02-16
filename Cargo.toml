@@ -1,6 +1,6 @@
 [package]
 name = "portsniffer"
-version = "1.0.1"
+version = "1.0.2"
 author = "Vin H<vinh260607@gmail.com>"
 license = "MIT"
 description = "A simple port sniffer written in Rust"
